@@ -31,7 +31,7 @@ app.get('/todos/new', (req, res) => {
   return res.render('new')
 })
 
-app.get('/todos/:id', (res, req) => {
+app.get('/todos/:id', (req, res) => {
   const id = req.params.id
   return Todo.findById(id)
     .lean()
