@@ -5,7 +5,7 @@
       <form action="/users/login" method="POST">
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email">
+          <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" required>
         </div>
         {{!-- 以下留下email格式的第二種寫法 --}}
         {{!-- <label>Email
@@ -14,7 +14,8 @@
 
         <div class="form-group mt-3">
           <label for="password">Password</label>
-          <input type="password" id="password" name="password" class="form-control" placeholder="Enter Password">
+          <input type="password" id="password" name="password" class="form-control" placeholder="Enter Password"
+            required>
         </div>
         <button type="submit" class="btn btn-primary btn-block mt-3">Login</button>
       </form>
