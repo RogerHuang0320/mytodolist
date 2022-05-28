@@ -24,5 +24,4 @@ const userSchema = new Schema({
 // 如果直接呼叫 Date.now()，會回傳一組時間戳記 (timestamp)
 // 如果要轉換成人類看得懂的格式，則可以使用 Date()。
 
-
-module.exports = mongoose.model('User', todoSchema)
+module.exports = mongoose.model('User', userSchema)
