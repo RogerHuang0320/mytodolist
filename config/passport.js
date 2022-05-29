@@ -1,5 +1,5 @@
 const passport = require('passport')
-const LocalStrategy = require('passort-local').LocalStrategy
+const LocalStrategy = require('passport-local').Strategy
 const User = require('../models/user')
 
 module.exports = app => {
@@ -22,7 +22,7 @@ module.exports = app => {
   }))
   // 設定序列化與反序列化
   passport.serializeUser((user, done) => {
-    done(null, user.id)
+    done(null, user.id)  //這裡用user._id也可以，不帶底線的id是mongoose內建的
   })
   passport.deserializeUser((id, done) => {
     User.findById(id)
